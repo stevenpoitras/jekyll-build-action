@@ -15,6 +15,9 @@ chmod -R a+w /github/workspace
 # Build the Jekyll site
 ####################################################
 
+gem install bundler
+gem update bundler
+bundle install --without development --jobs 4 --retry 3
 bundle exec jekyll build --trace
 
 ####################################################
